@@ -27,31 +27,32 @@ langToggle.addEventListener("click", () => {
   }
 });
 
-// Theme Toggle
+// Theme Toggle - Using Tailwind's dark mode system
 const themeToggle = document.getElementById("themeToggle");
-const body = document.body;
 let isDark = true;
+
+// Check for saved theme preference or default to dark mode
+if (localStorage.getItem('theme') === 'light') {
+  isDark = false;
+  html.classList.remove('dark');
+  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+} else {
+  isDark = true;
+  html.classList.add('dark');
+  themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+}
 
 themeToggle.addEventListener("click", () => {
   isDark = !isDark;
 
   if (isDark) {
-    body.className = "gradient-bg text-white transition-all duration-300";
+    html.classList.add('dark');
     themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    localStorage.setItem('theme', 'dark');
   } else {
-    body.className = "bg-gray-100 text-gray-900 transition-all duration-300";
+    html.classList.remove('dark');
     themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-
-    // Update sections for light mode
-    document.querySelectorAll(".bg-dark-secondary").forEach((el) => {
-      el.classList.remove("bg-dark-secondary");
-      el.classList.add("bg-white", "shadow-lg");
-    });
-
-    document.querySelectorAll(".bg-dark-accent").forEach((el) => {
-      el.classList.remove("bg-dark-accent");
-      el.classList.add("bg-gray-200");
-    });
+    localStorage.setItem('theme', 'light');
   }
 });
 
@@ -113,17 +114,6 @@ document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
   alert(isArabic ? "تم إرسال الرسالة بنجاح!" : "Message sent successfully!");
 });
-
-// document.querySelector("form").addEventListener("submit", (e) => {
-//   e.preventDefault();
-
-//   emailjs.sendForm("service_9zg6ide", "template_00nb0tt", this)
-//     .then(() => {
-//       alert(isArabic ? "تم إرسال الرسالة بنجاح!" : "Message sent successfully!");
-//     }, (error) => {
-//       alert(isArabic? "فشل الإرسال: " + JSON.stringify(error): "Failed to send: " + JSON.stringify(error));
-//     });
-// });
 
 // Intersection Observer for animations
 const observerOptions = {
