@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>يوسف عباده - مطور ويب</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              dark: "#0F172A",
+              "dark-secondary": "#1E293B",
+              "dark-accent": "#334155",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      }
+      .floating-animation {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+      .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .skill-card:hover {
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+      }
+      .project-card:hover {
+        transform: scale(1.05);
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="gradient-bg text-white transition-all duration-300">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-dark/90 backdrop-blur-md border-b border-dark-accent"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <div class="text-xl font-bold text-primary">
+            <span class="ar-text">يوسف عباده</span>
+            <span class="en-text hidden">Yousef Ebada</span>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex space-x-8 rtl:space-x-reverse">
+            <a
+              href="#home"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">الرئيسية</span>
+              <span class="en-text hidden">Home</span>
+            </a>
+            <a
+              href="#about"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">نبذة عني</span>
+              <span class="en-text hidden">About</span>
+            </a>
+            <a
+              href="#skills"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">المهارات</span>
+              <span class="en-text hidden">Skills</span>
+            </a>
+            <a
+              href="#projects"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">المشاريع</span>
+              <span class="en-text hidden">Projects</span>
+            </a>
+            <a
+              href="#contact"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">التواصل</span>
+              <span class="en-text hidden">Contact</span>
+            </a>
+          </div>
+
+          <!-- Controls -->
+          <div class="flex items-center space-x-4 rtl:space-x-reverse">
+            <!-- Language Toggle -->
+            <button
+              id="langToggle"
+              class="p-2 rounded-lg bg-dark-secondary hover:bg-dark-accent transition-colors"
+            >
+              <i class="fas fa-language"></i>
+            </button>
+
+            <!-- Theme Toggle -->
+            <button
+              id="themeToggle"
+              class="p-2 rounded-lg bg-dark-secondary hover:bg-dark-accent transition-colors"
+            >
+              <i class="fas fa-moon"></i>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobileMenuBtn"
+              class="md:hidden p-2 rounded-lg bg-dark-secondary hover:bg-dark-accent transition-colors"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden pb-4">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#home"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">الرئيسية</span>
+              <span class="en-text hidden">Home</span>
+            </a>
+            <a
+              href="#about"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">نبذة عني</span>
+              <span class="en-text hidden">About</span>
+            </a>
+            <a
+              href="#skills"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">المهارات</span>
+              <span class="en-text hidden">Skills</span>
+            </a>
+            <a
+              href="#projects"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">المشاريع</span>
+              <span class="en-text hidden">Projects</span>
+            </a>
+            <a
+              href="#contact"
+              class="nav-link hover:text-primary transition-colors"
+            >
+              <span class="ar-text">التواصل</span>
+              <span class="en-text hidden">Contact</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+              <span class="ar-text">مرحباً بك انا</span>
+              <span class="en-text hidden">Welcome I'm</span>
+            </h1>
+            <h2 class="text-2xl md:text-4xl text-primary mb-4">
+              <span class="ar-text">يوسف عباده</span>
+              <span class="en-text hidden">Yousef Ebada</span>
+            </h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-6">
+              <span class="ar-text">مطور ويب متخصص</span>
+              <span class="en-text hidden">Specialized Web Developer</span>
+            </p>
+            <p class="text-gray-400 mb-8 leading-relaxed">
+              <span class="ar-text"
+                >أنا يوسف عبادة، طالب علوم حاسب بالفرقه الثالثة ومطور ويب متخصص
+                في تقنيات MERN-Stack، شغوف بإنشاء تطبيقات ويب عصرية وسهلة
+                الاستخدام. تخرجت من مبادرة رواد مصر الرقمية (DEPI) كمتدرب Web
+                Developer، وبعدها عملت كمدرب حر في نفس المبادرة. كما تدربت في
+                قطاع تكنولوجيا المعلومات بشركة Contact FinTech واكتسبت خبرة
+                عملية في مشاريع حقيقية. لدي خبرة في تطوير الواجهات الأمامية
+                والخلفية باستخدام تقنيات MERN، وأسعى دائمًا لتطوير مهاراتي
+                والمشاركة في مشاريع مبتكرة تساهم في تقديم حلول رقمية
+                فعّالة.</span
+              >
+              <span class="en-text hidden"
+                >I’m Yousef Ebada, a third year Computer Science Student and
+                MERN-Stack Web Developer with a strong passion for creating
+                user-friendly web applications. I completed the Digital Egypt
+                Pioneers Initiative (DEPI) as a Web Developer trainee and later
+                contributed as a Freelance Instructor. I also trained in the IT
+                sector at Contact FinTech, gaining valuable industry experience.
+                Skilled in both front-end and back-end development using the
+                MERN stack, I enjoy solving real-world problems through
+                innovative digital solutions. Always eager to learn,
+                collaborate, and contribute to impactful projects.</span
+              >
+            </p>
+            <div class="flex flex-wrap gap-4 mb-8">
+              <button>
+                <a
+                  href="#contact"
+                  class="ar-text bg-primary hover:bg-blue-600 px-6 py-3 rounded-lg transition-colors"
+                  >تواصل معي</a
+                >
+                <a
+                  href="#contact"
+                  class="en-text hidden bg-primary hover:bg-blue-600 px-6 py-3 rounded-lg transition-colors"
+                  >Contact Me</a
+                >
+              </button>
+              <button
+                class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg transition-colors"
+              >
+                <a href="Yousef's CV (1).pdf" download class="ar-text"
+                  >تحميل السيرة الذاتية</a
+                >
+                <!-- <span class="en-text hidden">Download CV</span> -->
+                <a href="Yousef's CV (1).pdf" download class="en-text"
+                  >Download CV</a
+                >
+              </button>
+            </div>
+            <div class="flex space-x-4 rtl:space-x-reverse">
+              <a
+                href="https://github.com/YousefEbada"
+                target="_blank"
+                class="text-gray-400 hover:text-primary transition-colors text-xl"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/yousef-ebada/"
+                target="_blank"
+                class="text-gray-400 hover:text-primary transition-colors text-xl"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/yousef.ebada.2025"
+                target="_blank"
+                class="text-gray-400 hover:text-primary transition-colors text-xl"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/yousefomar6464/"
+                target="_blank"
+                class="text-gray-400 hover:text-primary transition-colors text-xl"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hidden md:flex justify-center">
+            <div class="relative">
+              <div
+                class="w-80 h-80 rounded-full overflow-hidden border-4 border-primary floating-animation"
+              >
+                <img
+                  src="./meeebestbadla.png"
+                  alt="Profile"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full floating-animation"
+                style="animation-delay: 1s"
+              ></div>
+              <div
+                class="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-400 rounded-full floating-animation"
+                style="animation-delay: 2s"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-dark-secondary/50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="ar-text">نبذة عني</span>
+            <span class="en-text hidden">About Me</span>
+        </h2>
+        <div class="w-20 h-1 mx-auto mb-4"></div>
+            <p class="text-gray-400 w-full mx-auto">
+                <span class="ar-text" dir="rtl"
+                >مرحبًا، أنا يوسف عبادة، خريج علوم الحاسوب ومطوّر ويب شغوف بتقنيات MERN-Stack. لدي خبرة عملية في بناء تطبيقات ويب حديثة وسهلة الاستخدام تقدّم تجارب رقمية سلسة. أكملت بنجاح مبادرة رواد مصر الرقمية (DEPI)، حيث تدربت كمطوّر ويب ثم ساهمت لاحقًا كمدرّب حر، أساعد الآخرين على تطوير مهاراتهم التقنية. بالإضافة إلى ذلك، تدربت كمطوّر ويب في قطاع تكنولوجيا المعلومات بشركة Contact FinTech، مما أتاح لي خبرة قيّمة واطلاعًا على مشاريع حقيقية في سوق العمل.
+
+متخصصًا في تقنيات MERN stack (MongoDB, Express.js, React, Node.js)، أمتلك أساسًا قويًا في كل من تطوير الواجهة الأمامية والبرمجة الخلفية. إن خلفيتي الأكاديمية في علوم الحاسوب، إلى جانب التدريب المهني والخبرة العملية في المجال، تزوّدني بالقدرة التحليلية والمعرفة التقنية لمواجهة التحديات المعقدة وتقديم حلول مؤثرة.
+
+أنا دائمًا متحمس لتوسيع مهاراتي، والتعاون في مشاريع مبتكرة، والمساهمة في بناء حلول رقمية ذات قيمة حقيقية. دعونا نتواصل ونبني معًا شيئًا رائعًا!
+                </span
+                >
+                <span class="en-text hidden"
+                >Hi, I’m Yousef Ebada, a Computer Science graduate and a passionate MERN-Stack Web Developer. I have hands-on experience in building modern, user-friendly web applications that deliver seamless digital experiences.
+
+I successfully completed the Digital Egypt Pioneers Initiative (DEPI), where I trained as a Web Developer and later contributed as a Freelance Instructor, helping others grow their technical skills. In addition, I trained as a Web Developer in the IT sector at Contact FinTech, gaining valuable industry experience and exposure to real-world projects.
+
+Specializing in the MERN stack (MongoDB, Express.js, React, and Node.js), I possess a strong foundation in both front-end and back-end development. My academic background in Computer Science, combined with professional training and industry experience, equips me with the analytical and technical expertise to tackle complex challenges and deliver impactful solutions.
+
+I’m always eager to expand my skill set, collaborate on innovative projects, and contribute to creating meaningful digital solutions. Let’s connect and build something great together!</span
+                >
+            </p>
+        </div>
+          <div class="w-20 h-1 mx-auto"></div>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div
+              class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-code text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">
+              <span class="ar-text">تطوير</span>
+              <span class="en-text hidden">Development</span>
+            </h3>
+            <p class="text-gray-400">
+              <span class="ar-text"
+                >خبرة في تطوير مواقع الويب باستخدام أحدث التقنيات والأدوات</span
+              >
+              <span class="en-text hidden"
+                >Experience in web development using the latest technologies and
+                tools</span
+              >
+            </p>
+          </div>
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div
+              class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-paint-brush text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">
+              <span class="ar-text">تصميم</span>
+              <span class="en-text hidden">Design</span>
+            </h3>
+            <p class="text-gray-400">
+              <span class="ar-text"
+                >تصميم واجهات مستخدم جذابة وسهلة الاستخدام</span
+              >
+              <span class="en-text hidden"
+                >Designing attractive and user-friendly interfaces</span
+              >
+            </p>
+          </div>
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div
+              class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4"
+            >
+              <i class="fas fa-mobile-alt text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">
+              <span class="ar-text">استجابة</span>
+              <span class="en-text hidden">Responsive</span>
+            </h3>
+            <p class="text-gray-400">
+              <span class="ar-text"
+                >تطوير مواقع متجاوبة تعمل على جميع الأجهزة</span
+              >
+              <span class="en-text hidden"
+                >Developing responsive websites that work on all devices</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="ar-text">المهارات التقنية</span>
+            <span class="en-text hidden">Technical Skills</span>
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            <span class="ar-text"
+              >مجموعة شاملة من المهارات التقنية والأدوات التي أستخدمها في تطوير
+              المشاريع</span
+            >
+            <span class="en-text hidden"
+              >A comprehensive set of technical skills and tools I use in
+              project development</span
+            >
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Frontend Skills -->
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center mr-3 rtl:mr-0 rtl:ml-3"
+              >
+                <i class="fab fa-html5 text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold">
+                <span class="ar-text">تطوير الواجهات</span>
+                <span class="en-text hidden">Frontend Development</span>
+              </h3>
+            </div>
+            <div class="space-y-2 text-sm text-gray-400">
+              <div>HTML5</div>
+              <div>CSS3 & Sass</div>
+              <div>JavaScript ES6+</div>
+              <div>React.js</div>
+              <div>Vue.js</div>
+            </div>
+          </div>
+
+          <!-- Backend Skills -->
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center mr-3 rtl:mr-0 rtl:ml-3"
+              >
+                <i class="fas fa-server text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold">
+                <span class="ar-text">تطوير الخادم</span>
+                <span class="en-text hidden">Backend Development</span>
+              </h3>
+            </div>
+            <div class="space-y-2 text-sm text-gray-400">
+              <div>Node.js</div>
+              <div>Express.js</div>
+              <div>PHP</div>
+              <div>Python</div>
+              <div>MongoDB</div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center mr-3 rtl:mr-0 rtl:ml-3"
+              >
+                <i class="fas fa-tools text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold">
+                <span class="ar-text">الأدوات</span>
+                <span class="en-text hidden">Tools</span>
+              </h3>
+            </div>
+            <div class="space-y-2 text-sm text-gray-400">
+              <div>Git & GitHub</div>
+              <div>VS Code</div>
+              <div>Figma</div>
+              <div>Webpack</div>
+              <div>Docker</div>
+            </div>
+          </div>
+
+          <!-- Mobile Development -->
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center mr-3 rtl:mr-0 rtl:ml-3"
+              >
+                <i class="fas fa-mobile-alt text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold">
+                <span class="ar-text">تطوير الجوال</span>
+                <span class="en-text hidden">Mobile Development</span>
+              </h3>
+            </div>
+            <div class="space-y-2 text-sm text-gray-400">
+              <div>React Native</div>
+              <div>Flutter</div>
+              <div>Progressive Web Apps</div>
+              <div>Responsive Design</div>
+              <div>Mobile UI/UX</div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center mr-3 rtl:mr-0 rtl:ml-3"
+              >
+                <i class="fas fa-database text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold">
+                <span class="ar-text">قواعد البيانات</span>
+                <span class="en-text hidden">Databases</span>
+              </h3>
+            </div>
+            <div class="space-y-2 text-sm text-gray-400">
+              <div>MySQL</div>
+              <div>PostgreSQL</div>
+              <div>MongoDB</div>
+              <div>Firebase</div>
+              <div>Redis</div>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div class="skill-card bg-dark-secondary p-6 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 bg-gray-500 rounded-lg flex items-center justify-center mr-3 rtl:mr-0 rtl:ml-3"
+              >
+                <i class="fas fa-cloud text-white"></i>
+              </div>
+              <h3 class="text-lg font-bold">
+                <span class="ar-text">النشر والاستضافة</span>
+                <span class="en-text hidden">DevOps & Hosting</span>
+              </h3>
+            </div>
+            <div class="space-y-2 text-sm text-gray-400">
+              <div>AWS</div>
+              <div>Vercel</div>
+              <div>Netlify</div>
+              <div>Docker</div>
+              <div>CI/CD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-dark-secondary/50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="ar-text">المشاريع</span>
+            <span class="en-text hidden">Projects</span>
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            <span class="ar-text"
+              >مجموعة من أحدث المشاريع التي قمت بتطويرها باستخدام تقنيات
+              متنوعة</span
+            >
+            <span class="en-text hidden"
+              >A collection of the latest projects I've developed using various
+              technologies</span
+            >
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+
+          <!-- Project 2 -->
+          <div
+            class="project-card bg-dark-secondary rounded-lg overflow-hidden"
+          >
+            <div
+              class="h-72 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center"
+            >
+              <img
+                src="./portgal1.png"
+                alt="Project 2"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar-text">نظام إدارة المهام</span>
+                <span class="en-text hidden">Task Management System</span>
+              </h3>
+              <p class="text-gray-400 mb-4">
+                <span class="ar-text"
+                  >تطبيق ويب لإدارة المهام والمشاريع مع واجهة سهلة
+                  الاستخدام</span
+                >
+                <span class="en-text hidden"
+                  >Web application for task and project management with
+                  user-friendly interface</span
+                >
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >Vue.js</span
+                >
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >Express</span
+                >
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >MySQL</span
+                >
+              </div>
+              <div class="flex space-x-4 rtl:space-x-reverse">
+                <a
+                  href="https://thiqah.vercel.app/"
+                  target="_blank"
+                  class="text-primary hover:text-blue-400 transition-colors"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                  <span class="ar-text ml-2 rtl:ml-0 rtl:mr-2">معاينة</span>
+                  <span class="en-text hidden ml-2 rtl:ml-0 rtl:mr-2"
+                    >Preview</span
+                  >
+                </a>
+                <a
+                  href="https://github.com/YousefEbada/thiqah-oasis-home"
+                  target="_blank"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  <i class="fab fa-github"></i>
+                  <span class="ar-text ml-2 rtl:ml-0 rtl:mr-2">الكود</span>
+                  <span class="en-text hidden ml-2 rtl:ml-0 rtl:mr-2"
+                    >Code</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-card bg-dark-secondary rounded-lg overflow-hidden"
+          >
+            <div
+              class="h-72 bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center"
+            >
+              <img
+                src="./Minimalist Neutral Multi Device Computer Mockup Website Launch Instagram Post (1).png"
+                alt="Project 3"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar-text">منصة التواصل الاجتماعي</span>
+                <span class="en-text hidden">Social Media Platform</span>
+              </h3>
+              <p class="text-gray-400 mb-4">
+                <span class="ar-text"
+                  >منصة تواصل اجتماعي مع ميزات المشاركة والتفاعل المتقدمة</span
+                >
+                <span class="en-text hidden"
+                  >Social media platform with advanced sharing and interaction
+                  features</span
+                >
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >React Native</span
+                >
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >Firebase</span
+                >
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >Redux</span
+                >
+              </div>
+              <div class="flex space-x-4 rtl:space-x-reverse">
+                <a
+                  href="https://movieappsdk.vercel.app/"
+                  target="_blank"
+                  class="text-primary hover:text-blue-400 transition-colors"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                  <span class="ar-text ml-2 rtl:ml-0 rtl:mr-2">معاينة</span>
+                  <span class="en-text hidden ml-2 rtl:ml-0 rtl:mr-2"
+                    >Preview</span
+                  >
+                </a>
+                <a
+                  href="https://github.com/YousefEbada/Movie-App"
+                  target="_blank"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  <i class="fab fa-github"></i>
+                  <span class="ar-text ml-2 rtl:ml-0 rtl:mr-2">الكود</span>
+                  <span class="en-text hidden ml-2 rtl:ml-0 rtl:mr-2"
+                    >Code</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="project-card bg-dark-secondary rounded-lg overflow-hidden"
+          >
+            <div
+              class="h-72 bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center"
+            >
+              <img
+                src="./portgal3.png"
+                alt="Project 4"
+                class="w-[100%] h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">
+                <span class="ar-text">موقع مطعم</span>
+                <span class="en-text hidden">Restaurant Website</span>
+              </h3>
+              <p class="text-gray-400 mb-4">
+                <span class="ar-text"
+                  >موقع ويب لمطعم مع نظام حجز الطاولات وعرض القائمة</span
+                >
+                <span class="en-text hidden"
+                  >Restaurant website with table booking system and menu
+                  display</span
+                >
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >HTML5</span
+                >
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >CSS3</span
+                >
+                <span
+                  class="bg-primary/20 text-primary px-2 py-1 rounded text-sm"
+                  >JavaScript</span
+                >
+              </div>
+              <div class="flex space-x-4 rtl:space-x-reverse">
+                <a
+                  href="https://task-flow-eight-lyart.vercel.app/"
+                  target="_blank"
+                  class="text-primary hover:text-blue-400 transition-colors"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                  <span class="ar-text ml-2 rtl:ml-0 rtl:mr-2">معاينة</span>
+                  <span class="en-text hidden ml-2 rtl:ml-0 rtl:mr-2"
+                    >Preview</span
+                  >
+                </a>
+                <a
+                  href="https://github.com/YousefEbada/TaskFlow"
+                  target="_blank"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  <i class="fab fa-github"></i>
+                  <span class="ar-text ml-2 rtl:ml-0 rtl:mr-2">الكود</span>
+                  <span class="en-text hidden ml-2 rtl:ml-0 rtl:mr-2"
+                    >Code</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-16">
+          <div
+            class="bg-gradient-to-r from-primary to-blue-600 rounded-lg p-8 max-w-4xl mx-auto"
+          >
+            <h3 class="text-2xl font-bold mb-4">
+              <span class="ar-text">هل تحتاج إلى مطور محترف؟</span>
+              <span class="en-text hidden">Need a Professional Developer?</span>
+            </h3>
+            <p class="text-lg mb-6 opacity-90">
+              <span class="ar-text"
+                >دعني أساعدك في تحويل أفكارك إلى مشاريع رقمية ناجحة</span
+              >
+              <span class="en-text hidden"
+                >Let me help you turn your ideas into successful digital
+                projects</span
+              >
+            </p>
+            <a
+                href="#contact"
+              class="bg-white text-primary px-8 py-3 rounded-lg font-bold transition-all duration-500 ease-in-out hover:bg-[#0194fe] hover:text-white hover:shadow-lg hover:scale-105"
+            >
+              <span class="ar-text">ابدأ مشروعك الآن</span>
+              <span class="en-text hidden">Start Your Project Now</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            <span class="ar-text">التواصل</span>
+            <span class="en-text hidden">Contact</span>
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto mb-4"></div>
+          <p class="text-gray-400 max-w-2xl mx-auto">
+            <span class="ar-text"
+              >لا تتردد في التواصل معي لمناقشة مشروعك القادم أو للحصول على
+              استشارة مجانية</span
+            >
+            <span class="en-text hidden"
+              >Don't hesitate to contact me to discuss your next project or get
+              a free consultation</span
+            >
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-2xl font-bold mb-8">
+              <span class="ar-text">معلومات التواصل</span>
+              <span class="en-text hidden">Contact Information</span>
+            </h3>
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 rtl:mr-0 rtl:ml-4"
+                >
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">
+                    <span class="ar-text">البريد الإلكتروني</span>
+                    <span class="en-text hidden">Email</span>
+                  </h4>
+                  <p class="text-gray-400">yousefomar6464@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 rtl:mr-0 rtl:ml-4"
+                >
+                  <i class="fas fa-phone text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">
+                    <span class="ar-text">الهاتف</span>
+                    <span class="en-text hidden">Phone</span>
+                  </h4>
+                  <p class="text-gray-400">+20 01096766428</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 rtl:mr-0 rtl:ml-4"
+                >
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold">
+                    <span class="ar-text">الموقع</span>
+                    <span class="en-text hidden">Location</span>
+                  </h4>
+                  <p class="text-gray-400">
+                    <span class="ar-text">مصر, القاهرة, مدينة الشروق</span>
+                    <span class="en-text hidden"
+                      >Egypt, Cairo, Shorouk City</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <h4 class="font-bold mb-4">
+                <span class="ar-text">تابعني على</span>
+                <span class="en-text hidden">Follow Me</span>
+              </h4>
+              <div class="flex space-x-4 rtl:space-x-reverse">
+                <a
+                  href="https://github.com/YousefEbada"
+                  target="_blank"
+                  class="w-10 h-10 bg-dark-secondary hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/yousef-ebada/"
+                  target="_blank"
+                  class="w-10 h-10 bg-dark-secondary hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="https://www.facebook.com/yousef.ebada.2025"
+                  target="_blank"
+                  class="w-10 h-10 bg-dark-secondary hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
+                >
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/yousefomar6464/"
+                  target="_blank"
+                  class="w-10 h-10 bg-dark-secondary hover:bg-primary rounded-lg flex items-center justify-center transition-colors"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="bg-dark-secondary p-8 rounded-lg">
+            <h3 class="text-2xl font-bold mb-6">
+              <span class="ar-text">أرسل رسالة</span>
+              <span class="en-text hidden">Send Message</span>
+            </h3>
+            <form class="space-y-6" id="contactForm">
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium mb-2">
+                    <span class="ar-text">الاسم</span>
+                    <span class="en-text hidden">Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 bg-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder=""
+                    name="name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium mb-2">
+                    <span class="ar-text">البريد الإلكتروني</span>
+                    <span class="en-text hidden">Email</span>
+                  </label>
+                  <input
+                    type="email"
+                    class="w-full px-4 py-3 bg-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                    placeholder=""
+                    name="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">
+                  <span class="ar-text">الموضوع</span>
+                  <span class="en-text hidden">Subject</span>
+                </label>
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 bg-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                  placeholder=""
+                  name="subject"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">
+                  <span class="ar-text">الرسالة</span>
+                  <span class="en-text hidden">Message</span>
+                </label>
+                <textarea
+                  rows="5"
+                  class="w-full px-4 py-3 bg-dark-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                  placeholder=""
+                  name="message"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary hover:bg-blue-600 py-3 rounded-lg font-bold transition-colors"
+              >
+                <span class="ar-text">إرسال الرسالة</span>
+                <span class="en-text hidden">Send Message</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-secondary py-8 border-t border-dark-accent">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-right">
+          <div class="text-center md:text-right rtl:md:text-left mb-4 md:mb-0">
+            <p class="text-gray-400">
+              <span class="ar-text" dir="rtl"
+                >© 2024 يوسف عبادة, جميع الحقوق محفوظة.</span
+              >
+              <span class="en-text hidden"
+                >© 2024 Yousef Ebada. All rights reserved.</span
+              >
+            </p>
+          </div>
+          <!-- <div class="text-center">
+                    <p class="text-gray-400"> -->
+          <!-- <span class="ar-text">صُنع بـ ❤️ في المملكة العربية السعودية</span> -->
+          <!-- <span class="en-text hidden">Made with ❤️ in Saudi Arabia</span> -->
+          <!-- </p>
+                </div> -->
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("xJymfvrKxFUs8F1jk");
+      })();
+    </script>
+    <script src="contact.js"></script>
+
+    <!-- لو عندك ملف جافاسكربت خارجي -->
+    <script src="script.js"></script>
+  </body>
+</html>
