@@ -71,16 +71,6 @@ Passionate about building modern, scalable, and high-performance web & mobile ap
 
 ---
 
-## 🔥 GitHub Streak
-
-<div align="center">
-
-<img width="49%" src="https://streak-stats.demolab.com?user=YousefEbada&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D"/>
-
-</div>
-
----
-
 ## 🏆 Competitive Programming
 
 <div align="center">
