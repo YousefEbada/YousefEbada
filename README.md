@@ -124,17 +124,10 @@ Passionate about building modern, scalable, and high-performance web & mobile ap
 
 ---
 
-## 💡 Fun Fact
+## 🕹️ Fun Section  
 
-```javascript
-const yousef = {
-  code: ["JavaScript", "TypeScript", "C++"],
-  technologies: {
-    frontend: ["React", "Next.js", "Tailwind CSS"],
-    backend: ["Node.js", "Express.js"],
-    mobile: ["React Native"],
-    databases: ["MongoDB", "PostgreSQL", "MySQL"],
-    cloud: ["AWS", "Azure"],
-  },
-  currentFocus: "Building scalable full-stack applications 🚀",
-};
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/joewaleed/joewaleed/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/joewaleed/joewaleed/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/joewaleed/joewaleed/output/pacman-contribution-graph.svg">
+</picture>
