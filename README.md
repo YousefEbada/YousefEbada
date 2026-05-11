@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Yousef Ebada</h1>
 
 <h3 align="center">
-🚀 Full Stack MERN Developer | ⚛️ React & Next.js Developer | 📱 React Native Developer
+🚀 MERN Stack Developer | ⚛️ React & Next.js Developer | 📱 React Native Developer
 </h3>
 
 <p align="center">
