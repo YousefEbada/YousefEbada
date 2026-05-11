@@ -81,12 +81,6 @@ Passionate about building modern, scalable, and high-performance web & mobile ap
 
 ---
 
-## 📈 Contribution Graph
-
-[![Yousef's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=YousefEbada&theme=tokyo-night&hide_border=true)](https://github.com/YousefEbada)
-
----
-
 ## 🏆 Competitive Programming
 
 <div align="center">
