@@ -34,29 +34,47 @@ Passionate about building modern, scalable, and high-performance web & mobile ap
 
 ## 🚀 Tech Stack
 
-### 💻 Frontend
+<div align="center">
 
-<p align="left">
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,js,ts,redux,html,css" />
-</p>
+<img src="https://img.shields.io/badge/JavaScript-111827?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+<img src="https://img.shields.io/badge/TypeScript-111827?style=for-the-badge&logo=typescript&logoColor=3178C6" />
+<img src="https://img.shields.io/badge/React-111827?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Next.js-111827?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/React_Native-111827?style=for-the-badge&logo=react&logoColor=61DAFB" />
 
-### ⚙️ Backend
+<br/>
 
-<p align="left">
-<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgres,mysql,firebase" />
-</p>
+<img src="https://img.shields.io/badge/Node.js-111827?style=for-the-badge&logo=nodedotjs&logoColor=339933" />
+<img src="https://img.shields.io/badge/Express.js-111827?style=for-the-badge&logo=express&logoColor=white" />
+<img src="https://img.shields.io/badge/WebSocket-111827?style=for-the-badge&logo=socketdotio&logoColor=white" />
+<img src="https://img.shields.io/badge/GSAP-111827?style=for-the-badge&logo=greensock&logoColor=88CE02" />
 
-### ☁️ Cloud & Tools
+<br/>
 
-<p align="left">
-<img src="https://skillicons.dev/icons?i=aws,azure,git,github,postman,vscode" />
-</p>
+<img src="https://img.shields.io/badge/MongoDB-111827?style=for-the-badge&logo=mongodb&logoColor=47A248" />
+<img src="https://img.shields.io/badge/PostgreSQL-111827?style=for-the-badge&logo=postgresql&logoColor=4169E1" />
+<img src="https://img.shields.io/badge/MySQL-111827?style=for-the-badge&logo=mysql&logoColor=4479A1" />
 
-### 📱 Mobile Development
+<br/>
 
-<p align="left">
-<img src="https://skillicons.dev/icons?i=react" />
-</p>
+<img src="https://img.shields.io/badge/Tailwind_CSS-111827?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4" />
+<img src="https://img.shields.io/badge/Redux-111827?style=for-the-badge&logo=redux&logoColor=764ABC" />
+<img src="https://img.shields.io/badge/Firebase-111827?style=for-the-badge&logo=firebase&logoColor=FFCA28" />
+
+<br/>
+
+<img src="https://img.shields.io/badge/AWS-111827?style=for-the-badge&logo=amazonaws&logoColor=FF9900" />
+<img src="https://img.shields.io/badge/Azure-111827?style=for-the-badge&logo=microsoftazure&logoColor=0078D4" />
+<img src="https://img.shields.io/badge/Vercel-111827?style=for-the-badge&logo=vercel&logoColor=white" />
+
+<br/>
+
+<img src="https://img.shields.io/badge/Git-111827?style=for-the-badge&logo=git&logoColor=F05032" />
+<img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/Postman-111827?style=for-the-badge&logo=postman&logoColor=FF6C37" />
+<img src="https://img.shields.io/badge/Docker-111827?style=for-the-badge&logo=docker&logoColor=2496ED" />
+
+</div>
 
 ---
 
