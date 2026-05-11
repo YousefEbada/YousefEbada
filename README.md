@@ -12,10 +12,9 @@ Passionate about building modern, scalable, and high-performance web & mobile ap
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=24&pause=1000&color=36B49F&center=true&vCenter=true&width=700&lines=Full+Stack+MERN+Developer;Next.js+%26+React+Specialist;React+Native+Mobile+Developer;Frontend+Instructor+%40+DevHub;Soft+Skills+Instructor+%40+DEPI;500%2B+Problems+Solved+on+Codeforces+%26+LeetCode)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=24&pause=1000&color=36B49F&center=true&vCenter=true&width=700&lines=MERN+Stack+Developer;Next.js+%26+React+Specialist;React+Native+Mobile+Developer;Frontend+Instructor+%40+DevHub;Soft+Skills+Instructor+%40+DEPI;500%2B+Problems+Solved+on+Codeforces+%26+LeetCode)](https://git.io/typing-svg)
 
 </div>
-
 ---
 
 <img align="right" alt="coding" width="360" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif"/>
