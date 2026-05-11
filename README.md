@@ -75,7 +75,7 @@ Passionate about building modern, scalable, and high-performance web & mobile ap
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=YousefEbada&theme=tokyonight&hide_border=true"/>
+<img width="49%" src="https://streak-stats.demolab.com?user=YousefEbada&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D"/>
 
 </div>
 
